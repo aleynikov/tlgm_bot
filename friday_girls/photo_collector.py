@@ -9,7 +9,7 @@ import dropbox
 
 def get_top_photos(limit):
 	config = ConfigParser.ConfigParser()
-	config.read('tumblr.cfg')
+	config.read('cfg/tumblr.cfg')
 
 	client = pytumblr.TumblrRestClient(consumer_key=config.get('api', 'consumer_key'),
 		consumer_secret=config.get('api', 'consumer_secret'),
@@ -51,7 +51,7 @@ def photo_download(photo_url):
 
 def photo_upload(filename, filepath):
 	config = ConfigParser.ConfigParser()
-	config.read('dropbox.cfg')
+	config.read('cfg/dropbox.cfg')
 
 	foldername = time.strftime(config.get('folder_settings', 'time_format'))
 	folderpath = "/" + foldername
