@@ -1,0 +1,8 @@
+*.pyc
+*~
+/dist
+/build
+/docs/_build
+/.idea
+/.tox
+/dropbox.egg-info
