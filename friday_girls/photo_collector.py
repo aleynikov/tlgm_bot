@@ -64,8 +64,8 @@ def photo_upload(filename, filepath):
 
 	os.remove(filepath)
 
-def main():
-	links = get_top_photos(limit=10)
+def collect(photo_limit):
+	links = get_top_photos(photo_limit)
 
 	for photo_url in links:
 		result = photo_download(photo_url)
@@ -73,6 +73,3 @@ def main():
 		if result != None:
 			photo_upload(filename=result['filename'],
 				filepath=result['filepath'])
-
-if __name__ == '__main__':
-	main()
