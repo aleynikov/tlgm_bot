@@ -36,7 +36,7 @@ def get_top_photos(limit):
 def photo_download(photo_url):
 	response = requests.get(photo_url)
 
-	tmp_path = os.path.abspath('tmp/')
+	tmp_path = os.path.abspath('../tmp/')
 
 	if response.status_code == 200:
 		filename = hashlib.md5(photo_url).hexdigest()
