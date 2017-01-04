@@ -6,7 +6,7 @@ import logging
 from libs.cfg import Cfg
 import random
 
-from libs.photo.photo_collector import get_top_photos, photo_download
+from libs.photo_collector import get_top_photos, photo_download
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
 	level=logging.INFO)
