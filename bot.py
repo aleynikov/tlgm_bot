@@ -3,7 +3,7 @@
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 
-import ConfigParser
+from libs.cfg import Cfg
 import random
 
 from libs.photo.photo_collector import get_top_photos, photo_download
@@ -32,8 +32,7 @@ def error(bot, update, error):
 	logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 def main():
-	cfg = ConfigParser.ConfigParser()
-	cfg.read('../cfg/telegram.cfg')
+	cfg = Cfg('telegram')
 
 	updater = Updater(cfg.get('api', 'access_token'))
 
