@@ -1,7 +1,18 @@
 #!/usr/bin/env python
 
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram import (
+	InlineKeyboardButton,
+	InlineKeyboardMarkup
+)
+
+from telegram.ext import (
+	Updater,
+	CommandHandler,
+	MessageHandler,
+	Filters,
+	CallbackQueryHandler
+)
+
 import logging
 
 from libs.cfg import Cfg
