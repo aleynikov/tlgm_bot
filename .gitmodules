@@ -1,9 +1,0 @@
-[submodule "api/telegram"]
-	path = api/telegram
-	url = git://github.com/python-telegram-bot/python-telegram-bot.git
-[submodule "api/dropbox"]
-	path = api/dropbox
-	url = git://github.com/dropbox/dropbox-sdk-python.git
-[submodule "api/tumblr"]
-	path = api/tumblr
-	url = git://github.com/tumblr/pytumblr.git
