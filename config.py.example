@@ -1,0 +1,12 @@
+telegram = {
+    'access_token': '...',
+}
+
+thumblr = {
+    'consumer_key': '...',
+    'consumer_secret': '...',
+    'oauth_token': '...',
+    'oauth_secret': '...',
+    'blog': '...',
+    'posts_limit': 0,
+}
