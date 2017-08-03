@@ -1,4 +1,4 @@
-from telegram.ext import Updater, CommandHandler
+from telegram.ext import Updater, CommandHandler, RegexHandler
 import logging
 import config
 import commands
@@ -19,7 +19,9 @@ def main():
 
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('start', commands.cmd_start))
-    dp.add_handler(CommandHandler('random_girl', commands.cmd_randomgirl))
+    dp.add_handler(CommandHandler('rand_girl', commands.cmd_randomgirl))
+    dp.add_handler(CommandHandler('gmusic', commands.cmd_gmusic))
+    dp.add_handler(RegexHandler(r'/dl_([0-9a-z]+)', commands.cmd_dl, pass_groups=True))
     dp.add_error_handler(error_handler)
 
     updater.start_polling()
