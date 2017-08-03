@@ -10,3 +10,8 @@ thumblr = {
     'blog': '...',
     'posts_limit': 0,
 }
+
+gmusic = {
+    'email': '...',
+    'password': '...',
+}
