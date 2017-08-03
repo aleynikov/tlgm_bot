@@ -20,7 +20,7 @@ class RandomGirlCommand(object):
 
     def get_photo_links(self):
         posts = self.client.posts(
-            blogname=config.thumblr['post'],
+            blogname=config.thumblr['blog'],
             type='photo',
             limit=config.thumblr['posts_limit'],
         )
@@ -33,7 +33,8 @@ class RandomGirlCommand(object):
                 links.append(photo['original_size']['url'])
         return links
 
-    def photo_download(self, photo_url):
+    @staticmethod
+    def photo_download(photo_url):
         response = requests.get(photo_url)
 
         if response.status_code == requests.codes.ok:
@@ -56,7 +57,7 @@ class RandomGirlCommand(object):
 
             if photo_file is not None:
                 photo = open(photo_file['filepath'], 'rb')
-                bot.sendPhoto(
+                bot.send_photo(
                     chat_id=update.message.chat_id,
                     photo=photo,
                     caption=u'Take it!'
