@@ -2,3 +2,4 @@ python-telegram-bot
 pytumblr
 requests
 gmusicapi
+mutagen

@@ -21,5 +21,12 @@ class Client(object):
         return songs
 
     def get_song_url(self, song_nid):
-        song_id = 'T{0}'.format(song_nid)
+        song_id = self.__prepare_song_id(song_nid)
         return self.client.get_stream_url(song_id)
+
+    def get_song_info(self, song_nid):
+        song_id = self.__prepare_song_id(song_nid)
+        return self.client.get_track_info(song_id)
+
+    def __prepare_song_id(self, song_nid):
+        return 'T{0}'.format(song_nid)
