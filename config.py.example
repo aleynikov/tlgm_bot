@@ -15,3 +15,7 @@ gmusic = {
     'email': '...',
     'password': '...',
 }
+
+apiai = {
+    'client_access_token': '...',
+}
